@@ -1,0 +1,44 @@
+syntax = "proto3";
+package crs;
+
+message MessageHeader {
+    string sending_company_in = 1;
+    string transmitting_country = 2;
+    string receiving_country = 3;
+    enum MessageType {
+        CORS = 0;
+    }
+    MessageType message_type = 4;
+    string warning = 5;
+    string contact = 6;
+    string message_ref_id = 7;
+    enum MessageTypeIndic {
+        CRS701 = 0;
+        CRS702 = 1;
+        CRS703 = 2;
+    }
+    MessageTypeIndic message_type_indic = 8;
+    string corr_message_ref_id = 9;
+    int32 reporting_period = 10;
+    Timestamp timestamp = 11;
+}
+
+message PersonParty_Type {
+
+}
+
+message OrganisationParty_Type {
+    enum CountryCode_Type {
+        AD = 0;
+        AE = 1;
+        AF = 2;
+        AG = 3;
+        AI = 4;
+        AL = 5;
+    }
+
+}
+
+message CRSBody {
+
+}

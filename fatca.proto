@@ -1,0 +1,7 @@
+syntax = "proto3";
+package fatca;
+
+message MessageSpec {
+    string sending_company_in = 1;
+    
+}
